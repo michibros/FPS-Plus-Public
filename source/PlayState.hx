@@ -811,7 +811,7 @@ class PlayState extends MusicBeatState
 		// healthBar
 		
 		scoreTxt = new FlxText(healthBarBG.x - 105, (FlxG.height * 0.9) + 36, 800, "", 22);
-		scoreTxt.setFormat("assets/fonts/vcr.ttf", 22, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.setFormat("assets/fonts/cravone.otf", 22, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 
 		iconP1 = new HealthIcon(SONG.player1, true);
@@ -1493,9 +1493,9 @@ class PlayState extends MusicBeatState
 
 		switch(Config.accuracy){
 			case "none":
-				scoreTxt.text = "Score:" + songScore;
+				scoreTxt.text = "Punteggio: " + songScore;
 			default:
-				scoreTxt.text = "Score:" + songScore + " | Misses:" + misses + " | Accuracy:" + truncateFloat(accuracy, 2) + "%";
+				scoreTxt.text = "Punteggio: " + songScore + "   Errori: " + misses + "   Accuratezza: " + truncateFloat(accuracy, 2) + "%";
 		}
 
 		if (controls.PAUSE && startedCountdown && canPause)
@@ -1914,6 +1914,8 @@ class PlayState extends MusicBeatState
 
 				if (storyDifficulty == 2)
 					difficulty = '-hard';
+				if (storyDifficulty == 3)
+					difficulty = '-speed';
 
 				trace('LOADING NEXT SONG');
 				trace(PlayState.storyPlaylist[0].toLowerCase() + difficulty);

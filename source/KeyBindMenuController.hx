@@ -30,7 +30,7 @@ class KeyBindMenuController extends MusicBeatState
     var keyTextDisplay:FlxText;
     var keyWarning:FlxText;
     var warningTween:FlxTween;
-    var keyText:Array<String> = ["LEFT", "DOWN", "UP", "RIGHT"];
+    var keyText:Array<String> = ["Sinistra", "Giu", "Su", "Destra"];
     var defaultKeys:Array<String> = ["X", "A", "Y", "B"];
     var allowedKeys:Array<Int> = [];
     var curSelected:Int = 0;
@@ -77,18 +77,18 @@ class KeyBindMenuController extends MusicBeatState
 		keyTextDisplay.borderQuality = 1;
         add(keyTextDisplay);
 
-        keyWarning = new FlxText(0, 580, 1280, "WARNING: BIND NOT SET, TRY ANOTHER KEY", 42);
+        keyWarning = new FlxText(0, 580, 1280, "Attenzione: Tasto non assegnato, provane un altro", 42);
 		keyWarning.scrollFactor.set(0, 0);
-		keyWarning.setFormat("assets/fonts/vcr.ttf", 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		keyWarning.setFormat("assets/fonts/cravone.otf", 42, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         keyWarning.borderSize = 3;
 		keyWarning.borderQuality = 1;
         keyWarning.screenCenter(X);
         keyWarning.alpha = 0;
         add(keyWarning);
 
-        var backText = new FlxText(5, FlxG.height - 37, 0, "ESCAPE - Back to Menu\nBACKSPACE - Reset to Defaults\n", 16);
+        var backText = new FlxText(5, FlxG.height - 37, 0, "ESC - Torna al menu\nBACKSPACE - Reimposta predefiniti\n", 16);
 		backText.scrollFactor.set();
-		backText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		backText.setFormat("Cravone", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
         add(backText);
 
         warningTween = FlxTween.tween(keyWarning, {alpha: 0}, 0);
@@ -189,13 +189,13 @@ class KeyBindMenuController extends MusicBeatState
             switch(keyDisplay){
 
                 case "A":
-                    keyDisplay = "A (CROSS)";
+                    keyDisplay = "A (CROCE)";
                 case "B":
-                    keyDisplay = "B (CIRCLE)";
+                    keyDisplay = "B (CERCHIO)";
                 case "X":
-                    keyDisplay = "X (SQUARE)";
+                    keyDisplay = "X (QUADRATO)";
                 case "Y":
-                    keyDisplay = "Y (TRIANGLE)";
+                    keyDisplay = "Y (TRIANGOLO)";
                 default:
                     keyDisplay = keyDisplay.replace("STICK_DIGITAL", "STICK").replace("_", " ");
 

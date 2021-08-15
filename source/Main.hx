@@ -22,6 +22,7 @@ class Main extends Sprite
 	public static var skipcharacters:Bool = Sys.args().contains("-skipcharacters");
 	public static var skipgraphics:Bool = Sys.args().contains("-skipgraphics");
 	public static var flippymode:Bool = Sys.args().contains("-flippymode");
+	public static var showfps:Bool = Sys.args().contains("-showfps");
 
 	public function new()
 	{
@@ -32,13 +33,16 @@ class Main extends Sprite
 		else
 			addChild(new FlxGame(0, 0, TitleVidState, 1, 144, 144, true));
 
-		#if !mobile
-		fpsDisplay = new FPS(10, 3, 0xFFFFFF);
-		fpsDisplay.visible = false;
-		addChild(fpsDisplay);
-		#end
+		if(showfps)
+		{
+			fpsDisplay = new FPS(10, 3, 0xFFFFFF);
+			fpsDisplay.visible = false;
+			addChild(fpsDisplay);
+		}
+		
 
 		if(!novid){
+			// dafuq?
 			var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
 
 			#if web

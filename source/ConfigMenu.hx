@@ -32,14 +32,14 @@ class ConfigMenu extends MusicBeatState
 	var offsetValue:Float;
 	var accuracyType:String;
 	var accuracyTypeInt:Int;
-	var accuracyTypes:Array<String> = ["none", "simple", "complex"];
+	var accuracyTypes:Array<String> = ["Nessuno", "Semplice", "Complesso"];
 	var healthValue:Int;
 	var healthDrainValue:Int;
 	var iconValue:Bool;
 	var downValue:Bool;
 	var glowValue:Bool;
 	var randomTapValue:Int;
-	var randomTapTypes:Array<String> = ["never", "not singing", "always"];
+	var randomTapTypes:Array<String> = ["Mai", "Quando non si canta", "Sempre"];
 	var noCapValue:Bool;
 	var scheme:Int;
 
@@ -50,51 +50,51 @@ class ConfigMenu extends MusicBeatState
 	var leftRightCount:Int = 0;
 	
 	var settingText:Array<String> = [
-									"NOTE OFFSET", 
-									"ACCURACY DISPLAY", 
-									"UNCAP FRAMERATE",
-									"ALLOW GHOST TAPPING",
-									"HP GAIN MULTIPLIER",
-									"HP DRAIN MULTIPLIER",
-									"DOWNSCROLL",
-									"NOTE GLOW",
-									"IMPROVED HEALTH HEADS",
-									"CONTROLLER SCHEME",
-									"[EDIT KEY BINDS]"
+									"OFFSET DELLE NOTE", 
+									"CONTATORE ACCURATEZZA", 
+									"LIMITA GLI FPS",
+									"PERMETTI TASTI A CASO",
+									"MOLTIPLICATORE GUADAGNO HP",
+									"MOLTIPLICATORE PERDITA HP",
+									"SCORRIMENTO DELLE NOTE VERSO IL BASSO",
+									"ILLUMINAZIONE DELLE NOTE",
+									"ICONE PERSONAGGI MIGLIORATE",
+									"SCHEMA CONTROLLER",
+									"[PERSONALIZZA TASTI]"
 									];
 								
 	var settingDesc:Array<String> = [
-									"Adjust note timings.\nPress \"ENTER\" to start the offset calibration." + (FlxG.save.data.ee1?"\nHold \"SHIFT\" to force the pixel calibration.\nHold \"CTRL\" to force the normal calibration.":""), 
-									"What type of accuracy calculation you want to use. Simple is just notes hit / total notes. Complex also factors in how early or late a note was.", 
-									"Uncaps the framerate during gameplay.",
-									"Prevents you from missing when you don't need to play.",
-									"Modifies how much Health you gain when hitting a note.",
-									"Modifies how much Health you lose when missing a note.",
-									"Makes notes appear from the top instead the bottom.",
-									"Makes note arrows glow if they are able to be hit.",
-									"Adds low health icons for characters missing them and adds winning icons.\n[This disables modded health icons unless there is a version of the files included in the mod.]",
+									"Imposta il delay delle note.\nPremi \"INVIO\" per entrare nello strumento di calibrazione." + (FlxG.save.data.ee1?"\nPremi \"SHIFT\" per forzare la calibrazione a pixel.\nPremi \"CTRL\" per forzare la calibrazione normale.":""), 
+									"Il calcolo dell'accuratezza che vuoi eseguire. Normale calcola l'accuratezza come note colpite su note totali, mentre Complesso tiene conto anche di quanto in ritardo si ha premuto una nota.", 
+									"Rimuove il limite di 168 FPS imposto da HaxeFlixel.",
+									"Le note premute a caso quando non stai cantando non conteranno come errore.",
+									"Modifica la quantita' di punti vita che guadagnerai quando colpisci una nota.",
+									"Modifica la quantita' di punti vita che perderai quando manchi una nota.",
+									"Fa apparire le note dall'alto invece che dal basso.",
+									"Illumina le note colpite.",
+									"Aggiunge le icone giocatore mancanti per alcuni personaggi che non hanno icone per vita bassa/quasi vittoria.\n[Questo disabilita eventuali mod delle icone a meno che non ci sia una versione della mod che supporta le icone aggiornate.]",
 									"TEMP",
-									"Change key binds."
+									"Modifica l'assegnazione dei tasti."
 									];
 
 	var ghostTapDesc:Array<String> = [
-									"Any key press that isn't for a valid note will cause you to miss.", 
-									"You can only  miss while you need to sing.", 
-									"You cannot miss unless you do not hit a note.\n[Note that this makes the game very easy and can remove a lot of the challenge.]"
+									"Ogni tasto che non corrisponde ad una nota contera' come errore.", 
+									"Ogni tasto che non corrisponde ad una nota contera' come errore solo se stai cantando.", 
+									"Solo le note non colpite conteranno come errore.\n[Questo rende il gioco molto semplice in quanto lo spam e' permesso.]"
 									];					
 
 	var controlSchemes:Array<String> = [
 									"DEFAULT", 
 									"ALT 1", 
 									"ALT 2",
-									"CUSTOM"
+									"PERSONALIZZATO"
 									];
 
 	var controlSchemesDesc:Array<String> = [
-									"LEFT: DPAD LEFT / X (SQUARE) / LEFT TRIGGER\nDOWN: DPAD DOWN / X (CROSS) / LEFT BUMPER\nUP: DPAD UP / Y (TRIANGLE) / RIGHT BUMPER\nRIGHT: DPAD RIGHT / B (CIRCLE) / RIGHT TRIGGER", 
-									"LEFT: DPAD LEFT / DPAD DOWN / LEFT TRIGGER\nDOWN: DPAD UP / DPAD RIGHT / LEFT BUMPER\nUP: X (SQUARE) / Y (TRIANGLE) / RIGHT BUMPER\nRIGHT: A (CROSS) / B (CIRCLE) / RIGHT TRIGGER", 
-									"LEFT: ALL DPAD DIRECTIONS\nDOWN: LEFT BUMPER / LEFT TRIGGER\nUP: RIGHT BUMPER / RIGHT TRIGGER\nRIGHT: ALL FACE BUTTONS",
-									"HIT A (CROSS) TO CHANGE CONTROLLER BINDS"
+									"Sinistra: DPAD Sinistra / X (QUADRATO) / Trigger Sinistro\nGiu: DPAD Giu / X (CROCE) / Dorsale Sinistro\nSu: DPAD Su / Y (TRIANGOLO) / Dorsale Destro\nDestra: DPAD Destra / B (CERCHIO) / Trigger Destro", 
+									"Sinistra: DPAD Sinistra / DPAD Giu / Trigger Sinistra\nGiu: DPAD Su / DPAD Destra / Bumper Sinistro \nSu: X (QUADRATO) / Y (TRIANGOLO) / Dorsale Destro\nDestra: A (CROCE) / B (CERCHIO) / Trigger Destro", 
+									"Sinistra: TUTTE LE DIREZIONI DEL DPAD\nGiu: BUMPER Sinistro / Trigger Sinistro\nSu: Dorsale Destro / Trigger Destro\nDestra: tutti i pulsanti principali",
+									"Premi A (CROCE) per cambiare l'assegnazione dei tasti del controller"
 									];
 
 									
@@ -166,18 +166,18 @@ class ConfigMenu extends MusicBeatState
 		
 		descText = new FlxText(320, 638, 640, "", 20);
 		descText.scrollFactor.set(0, 0);
-		descText.setFormat("assets/fonts/vcr.ttf", 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText.setFormat("assets/fonts/cravone.otf", 20, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		//descText.borderSize = 3;
 		descText.borderQuality = 1;
 
 		tabDisplay = new FlxText(5, FlxG.height - 53, 0, Std.string(tabKeys), 16);
 		tabDisplay.scrollFactor.set();
 		tabDisplay.visible = false;
-		tabDisplay.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		tabDisplay.setFormat("Cravone", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
-		var backText = new FlxText(5, FlxG.height - 37, 0, "ESCAPE - Back to Menu\nBACKSPACE - Reset to Defaults\n", 16);
+		var backText = new FlxText(5, FlxG.height - 37, 0, "ESC - Torna al menu\nBACKSPACE - Reimposta predefiniti\n", 16);
 		backText.scrollFactor.set();
-		backText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		backText.setFormat("Cravone", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 
 		add(configText);
 		add(descText);
@@ -472,6 +472,15 @@ class ConfigMenu extends MusicBeatState
 			exit();
 		}
 
+		#if debug
+		if (FlxG.keys.justPressed.Q)
+		{
+			canChangeItems = false;
+			Config.write(offsetValue, accuracyType, healthValue / 10.0, healthDrainValue / 10.0, iconValue, downValue, inputValue, glowValue, randomTapValue, noCapValue);
+			FlxG.switchState(new KeyBindQuick());
+		}
+		#end
+
 		super.update(elapsed);
 		
 		if(controls.LEFT_P || controls.RIGHT_P || controls.UP_P || controls.DOWN_P || controls.ACCEPT || FlxG.keys.justPressed.ANY)
@@ -494,11 +503,25 @@ class ConfigMenu extends MusicBeatState
 
         configText.text = "";
 
+		// Needed this to translate the default "true" and "false"...
         for(i in 0...settingText.length - 1){
-
-            var textStart = (i == configSelected) ? ">" : "  ";
-            configText.text += textStart + settingText[i] + ": " + getSetting(i) + "\n";
-
+			var textStart = (i == configSelected) ? ">" : "  ";
+			switch (i)
+			{
+				case 0:
+					configText.text += textStart + settingText[i] + ": " + getSetting(i) + "\n";
+				case 4:
+					configText.text += textStart + settingText[i] + ": " + getSetting(i) + "\n";
+				case 5:
+					configText.text += textStart + settingText[i] + ": " + getSetting(i) + "\n";
+				default:
+					if (getSetting(i) == true && i != 0)
+						configText.text += textStart + settingText[i] + ": Attivo\n";
+					else if (getSetting(i) == false && i != 0)
+						configText.text += textStart + settingText[i] + ": Disattivo\n";
+					else
+						configText.text += textStart + settingText[i] + ": " + getSetting(i) + "\n";
+			}
         }
 
 		var textStart = (configSelected == settingText.length - 1) ? ">" : "  ";

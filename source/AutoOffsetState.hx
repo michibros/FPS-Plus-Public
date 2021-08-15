@@ -16,7 +16,7 @@ class AutoOffsetState extends MusicBeatState
 
 	var easterEgg:Bool = FlxG.random.bool(1);
 	public static var forceEasterEgg:Int = 0;
-	var font:Array<String> = ["assets/fonts/Funkin-Bold.otf", "assets/fonts/vcr.ttf"];
+	var font:Array<String> = ["assets/fonts/Funkin-Bold.otf", "assets/fonts/cravone.otf"];
 
 	var hitBeats:Int = 0;
 	var offsetCalc:Int = 0;
@@ -118,9 +118,9 @@ class AutoOffsetState extends MusicBeatState
 		previousText.borderQuality = 1;
 		previousText.alpha = 0;
 
-		descText = new FlxText(320, 540, 640, "Tap any key to the beat of the music!\n", 40);
+		descText = new FlxText(320, 540, 640, "Premi qualsiasi tasto a tempo della musica!\n", 40);
 		descText.scrollFactor.set(0, 0);
-		descText.setFormat("assets/fonts/vcr.ttf", 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		descText.setFormat("assets/fonts/cravone.otf", 40, FlxColor.WHITE, FlxTextAlign.CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		descText.borderSize = 2;
 		descText.borderQuality = 1;
 		descText.alpha = 0;
@@ -130,7 +130,7 @@ class AutoOffsetState extends MusicBeatState
 		add(descText);
 
 		offsetText.text = "OFFSET\n" + offsetCalc + "ms\n";
-		previousText.text = "PREVIOUS\n0ms\n";
+		previousText.text = "PRECEDENTE\n0ms\n";
 
 		FlxG.camera.fade(FlxColor.BLACK, 0.5, true, function(){
 			FlxG.sound.music.volume = 1;
@@ -227,7 +227,7 @@ class AutoOffsetState extends MusicBeatState
 		offsetCalc = Std.int(offsetTotal / hitBeats);
 
 		offsetText.text = "OFFSET\n" + offsetCalc + "ms\n";
-		previousText.text = "PREVIOUS\n" + offsetAdd + "ms\n";
+		previousText.text = "PRECEDENTE\n" + offsetAdd + "ms\n";
 
 		speakers.animation.play("bump", true);
 

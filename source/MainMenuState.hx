@@ -95,12 +95,12 @@ class MainMenuState extends MusicBeatState
 
 		versionText = new FlxText(5, FlxG.height - 21, 0, Assets.getText('assets/data/version.txt'), 16);
 		versionText.scrollFactor.set();
-		versionText.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionText.setFormat("Cravone", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionText);
 
-		keyWarning = new FlxText(5, FlxG.height - 21 + 16, 0, "If your controls aren't working, try pressing BACKSPACE to reset them.", 16);
+		keyWarning = new FlxText(5, FlxG.height - 21 + 16, 0, "Se i tuoi controlli non funzionano, prova a premere BACKSPACE per resettarli.", 16);
 		keyWarning.scrollFactor.set();
-		keyWarning.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		keyWarning.setFormat("Cravone", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		keyWarning.alpha = 0;
 		add(keyWarning);
 

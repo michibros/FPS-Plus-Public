@@ -62,7 +62,8 @@ class TitleState extends MusicBeatState
 		KeyBinds.keyCheck();
 		PlayerSettings.init();
 
-		Main.fpsDisplay.visible = true;
+		if (Main.showfps)
+			Main.fpsDisplay.visible = true;
 
 		startIntro();
 	}

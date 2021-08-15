@@ -15,7 +15,7 @@ class PauseSubState extends MusicBeatSubstate
 {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
-	var menuItems:Array<String> = ['Resume', 'Restart Song', 'Exit to menu'];
+	var menuItems:Array<String> = ['Riprendi', 'Ricomincia', 'Torna al menu'];
 	var curSelected:Int = 0;
 
 	var pauseMusic:FlxSound;
@@ -27,15 +27,15 @@ class PauseSubState extends MusicBeatSubstate
 		openfl.Lib.current.stage.frameRate = 144;
 		
 		if (PlayState.storyPlaylist.length > 1 && PlayState.isStoryMode){
-			menuItems.insert(2, "Skip Song");
+			menuItems.insert(2, "Salta questa canzone");
 		}
 		
 		if (!PlayState.isStoryMode){
-			menuItems.insert(2, "Chart Editor");
+			menuItems.insert(2, "Editor livello");
 		}
 
 		if (!PlayState.isStoryMode && PlayState.sectionStart){
-			menuItems.insert(1, "Restart Section");
+			menuItems.insert(1, "Ricomincia sezione");
 		}
 
 		pauseMusic = new FlxSound().loadEmbedded('assets/music/breakfast' + TitleState.soundExt, true, true);
@@ -92,30 +92,30 @@ class PauseSubState extends MusicBeatSubstate
 
 			switch (daSelected)
 			{
-				case "Resume":
+				case "Riprendi":
 					unpause();
 					
-				case "Restart Song":
+				case "Ricomincia":
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyDown);
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyUp);
 					FlxG.resetState();
 					PlayState.sectionStart = false;
 
-				case "Restart Section":
+				case "Ricomincia sezione":
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyDown);
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyUp);
 					FlxG.resetState();
 
-				case "Chart Editor":
+				case "Editor livello":
 					PlayerSettings.menuControls();
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyDown);
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyUp);
 					FlxG.switchState(new ChartingState());
 					
-				case "Skip Song":
+				case "Salta questa canzone":
 					PlayState.instance.endSong();
 					
-				case "Exit to menu":
+				case "Torna al menu":
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyDown);
 					//FlxG.stage.removeEventListener(KeyboardEvent.KEY_DOWN, PlayState.instance.keyUp);
 
