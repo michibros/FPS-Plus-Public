@@ -1,60 +1,30 @@
 ![](/art/readme/logo.png)
 
-*Finally, it's open source.*
+-- ENGLISH --
+This is a mod for Friday Night Funkin'.
+Based on FPS Plus 3.7.2, this mod translates all of the game text in Italian, and also adds some things, which will be listed below.
 
-# Friday Night Funkin' FPS Plus
-Friday Night Funkin' FPS Plus is a mod of Friday Night Funkin' that aims to improve gameplay and add quality of life features.
+- Features
 
-*You can find the original game here:* **[Newgrounds](https://www.newgrounds.com/portal/view/770371) - [itch.io](https://ninja-muffin24.itch.io/funkin) - [GitHub](https://github.com/ninjamuffin99/Funkin)**
+    Addition of a new difficulty: IMPOSSIBLE mode
+        This mode makes the game even more difficult. Every song is taken from Hard and all the notes are sped up, making it more challenging.
+        This doesn't mean that the Hard difficulty is gone, simply that there are 4 difficulty level to choose from.
+    Change of the font for small text
+        I didn't really like the VCR font for smaller text, so I replaced it with a more fitting font for FNF.
+    Hiding the FPS counter by default
+        The FPS counter is now disabled by default, since it is usually useless. Players can turn it on by using the -showfps flag at startup or by using the provided batch file.
 
-## Features
 
-### Increased FPS
-The orignal purpose of FPS Plus. The game has an increased framerate over the base game and even an option for a completely uncapped framerate.
+-- ITALIANO --
+Questa è una mod per Friday Night Funkin'.
+Basata su FPS Plus 3.7.2, questa mod traduce tutto il testo presente nel gioco in italiano, e aggiunge un paio di cosette, elencate sotto.
 
-### Better Input
-Adjusts how the game handles input allowing you to hit notes more consistently.
+- Funzionalità aggiuntive
 
-This also changes held notes so that they disappear if released to early.
-
-### Fully Rebindable Keys
-So that you can use whatever wacky control scheme you come up with. Or you could just be boring and use DFJK. That works too...
-
-### Improved Chart Editor
-FPS Plus contains a modified chart editor that has more utility features and is way more user friendly.
-
-### Improved Animation Debug
-The animation debug has been adjusted to make editing offsets way easier and faster while requiring less guess work.
-
-### Downscroll
-Notes appear from the top of the screen instead of the bottom. This make help some people read patterns more easily.
-
-### Improved Health Icons
-Adjusted some of the health icons and adds winning icons.
-
-## Building
-- For build intructions, follow the guide on the Funkin github page [here](https://github.com/ninjamuffin99/Funkin#build-instructions).
-
-    - You do not need to install polymod since FPS Plus doesn't use it.
-    
-    - You can ignore is the part about ignored files since FPS Plus removes them.
-
-- Install GWebDev's fork of `extension-webm`:
-
-    - `haxelib git extension-webm https://github.com/GrowtopiaFli/extension-webm`
-
-    - And then run `lime rebuild extension-webm [windows/mac/linux]`. Change the target OS based on your system.
-
-## Credits
-### Friday Night Funkin'
-- [ninjamuffin99](https://twitter.com/ninja_muffin99) - Programmer
-- [PhantomArcade3K](https://twitter.com/phantomarcade3k) and [Evilsk8r](https://twitter.com/evilsk8r) - Art
-- [Kawaisprite](https://twitter.com/kawaisprite) - Musician
-
-### FPS Plus
-- [Rozebud](https://twitter.com/helpme_thebigt) - *Everything*
-
-### Shoutouts
-- [KadeDev](https://twitter.com/KadeDeveloper) - *Rival*
-- [GWebDev](https://twitter.com/GFlipaclip) - Haxeflixel Video
-- [Ethab Taxi](https://twitter.com/EthabTaxi) - He's just sorta chillin'.
+    Aggiunta di una nuova difficoltà: IMPOSSIBILE
+        Questa modalità rende il gioco ancora più difficile. Tutte le canzoni sono prese da Difficile ma le note sono più veloci, aumentando il livello di sfida.
+        La modalità Impossibile non sostituirà Difficile, bensì da adesso ci saranno 4 difficoltà tra cui scegliere.
+    Cambiamento del font per i testi più piccoli
+        Non mi piaceva più di tanto il font VCR usato nel gioco originale, così l'ho sostituito con uno che più si addiceva a FNF.
+    Occultamento del contatore FPS
+        Il contatore FPS è adesso nascosto di default, in quanto è spesso inutile. I giocatori possono abilitarlo usando la flag -showfps all'avvio oppure usando il file Batch incluso.
