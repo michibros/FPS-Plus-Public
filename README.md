@@ -1,6 +1,6 @@
 ![](/art/readme/logo.png)
 
-##ENGLISH
+# ENGLISH
 This is a mod for Friday Night Funkin'.
 Based on FPS Plus 3.7.2, this mod translates all of the game text in Italian, and also adds some things, which will be listed below.
 
@@ -15,7 +15,7 @@ Based on FPS Plus 3.7.2, this mod translates all of the game text in Italian, an
         The FPS counter is now disabled by default, since it is usually useless. Players can turn it on by using the -showfps flag at startup or by using the provided batch file.
 
 
-##ITALIANO
+# ITALIANO
 Questa è una mod per Friday Night Funkin'.
 Basata su FPS Plus 3.7.2, questa mod traduce tutto il testo presente nel gioco in italiano, e aggiunge un paio di cosette, elencate sotto.
 
