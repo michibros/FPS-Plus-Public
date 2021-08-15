@@ -6,13 +6,13 @@ Based on FPS Plus 3.7.2, this mod translates all of the game text in Italian, an
 
 - Features
 
-    Addition of a new difficulty: IMPOSSIBLE mode
-        This mode makes the game even more difficult. Every song is taken from Hard and all the notes are sped up, making it more challenging.
-        This doesn't mean that the Hard difficulty is gone, simply that there are 4 difficulty level to choose from.
-    Change of the font for small text
-        I didn't really like the VCR font for smaller text, so I replaced it with a more fitting font for FNF.
-    Hiding the FPS counter by default
-        The FPS counter is now disabled by default, since it is usually useless. Players can turn it on by using the -showfps flag at startup or by using the provided batch file.
+    - Addition of a new difficulty: IMPOSSIBLE mode
+        - This mode makes the game even more difficult. Every song is taken from Hard and all the notes are sped up, making it more challenging.
+        - This doesn't mean that the Hard difficulty is gone, simply that there are 4 difficulty level to choose from.
+    - Change of the font for small text
+        - I didn't really like the VCR font for smaller text, so I replaced it with a more fitting font for FNF.
+    - Hiding the FPS counter by default
+        - The FPS counter is now disabled by default, since it is usually useless. Players can turn it on by using the -showfps flag at startup or by using the provided batch file.
 
 
 # ITALIANO
