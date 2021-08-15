@@ -21,10 +21,10 @@ Basata su FPS Plus 3.7.2, questa mod traduce tutto il testo presente nel gioco i
 
 - Funzionalità aggiuntive
 
-    Aggiunta di una nuova difficoltà: IMPOSSIBILE
-        Questa modalità rende il gioco ancora più difficile. Tutte le canzoni sono prese da Difficile ma le note sono più veloci, aumentando il livello di sfida.
-        La modalità Impossibile non sostituirà Difficile, bensì da adesso ci saranno 4 difficoltà tra cui scegliere.
-    Cambiamento del font per i testi più piccoli
-        Non mi piaceva più di tanto il font VCR usato nel gioco originale, così l'ho sostituito con uno che più si addiceva a FNF.
-    Occultamento del contatore FPS
-        Il contatore FPS è adesso nascosto di default, in quanto è spesso inutile. I giocatori possono abilitarlo usando la flag -showfps all'avvio oppure usando il file Batch incluso.
+    - Aggiunta di una nuova difficoltà: IMPOSSIBILE
+        - Questa modalità rende il gioco ancora più difficile. Tutte le canzoni sono prese da Difficile ma le note sono più veloci, aumentando il livello di sfida.
+        - La modalità Impossibile non sostituirà Difficile, bensì da adesso ci saranno 4 difficoltà tra cui scegliere.
+    - Cambiamento del font per i testi più piccoli
+        - Non mi piaceva più di tanto il font VCR usato nel gioco originale, così l'ho sostituito con uno che più si addiceva a FNF.
+    - Occultamento del contatore FPS
+        - Il contatore FPS è adesso nascosto di default, in quanto è spesso inutile. I giocatori possono abilitarlo usando la flag -showfps all'avvio oppure usando il file Batch incluso.
